@@ -1,0 +1,96 @@
+<div class="border-black" class="col-md-8">
+    <h3>Ajouter un article</h3>
+        <form #newComputerForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Id</label> <br>
+                <input class="form-control" type="number" name="id" required #id="ngModel"
+                [(ngModel)]="computerToAdd.id">
+                <div [hidden]="id.valid" class="alert alert-danger">
+                L' ID'est requis
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Modèle</label> <br>
+                <input class="form-control" type="text"  name="modele" required #modele="ngModel"
+                [(ngModel)]="computerToAdd.modele">
+                <div [hidden]="modele.valid" class="alert alert-danger">
+                Le nom du modèle est requis
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label id="example-radio-group-label">Marque</label><br>
+                    <mat-radio-group
+                    name="marque"
+                        aria-labelledby="example-radio-group-label" class="example-radio-group"  #marque="ngModel"
+                        [(ngModel)]="computerToAdd.marque">
+                            <mat-radio-button  class="example-radio-button" *ngFor="let value of marques" [value]="value">
+                                {{value}}
+                            </mat-radio-button>
+                    </mat-radio-group>   
+                            <div [hidden]="marque.valid" class="alert alert-danger">
+                                Une marque est requise
+                            </div>  
+            </div>
+
+            <div class="form-group">
+                <label>Type</label> <br>            
+                <select required class="form-control"
+                    [(ngModel)]="computerToAdd.type" name="type" #type="ngModel">
+                    <option *ngFor="let choice of types" [ngValue]="choice" >
+                        {{choice}}
+                    </option>
+                </select>
+                <div [hidden]="type.valid" class="alert alert-danger">
+                    Un type est requis
+                </div> 
+            </div>
+
+        <div class="form-group">
+                <label id="example-radio-group-label">Catégorie</label><br>
+                    <mat-radio-group
+                    name="category"
+                        aria-labelledby="example-radio-group-label" class="example-radio-group"  #category="ngModel"
+                        [(ngModel)]="computerToAdd.category">
+                            <mat-radio-button  class="example-radio-button" *ngFor="let valeur of categories" [value]="valeur">
+                                {{valeur}}
+                            </mat-radio-button>
+                    </mat-radio-group>   
+                            <div [hidden]="category.valid" class="alert alert-danger">
+                                Un type est requise
+                            </div>  
+            </div>
+
+        <div class="form-group">
+                    <label>Prix d'achat</label> <br>
+                    <input class="form-control" type="number" name="prix_achat" required #prix_achat="ngModel"
+                    [(ngModel)]="computerToAdd.prix_achat">
+                    <div [hidden]="prix_achat.valid" class="alert alert-danger">
+                    Le prix d'achat est requis
+                    </div>
+        </div>
+        <div class="form-group">
+            <label>Prix de vente</label> <br>
+            <input class="form-control" type="number" name="prix_vente" required #prix_vente="ngModel"
+            [(ngModel)]="computerToAdd.prix_vente">
+            <div [hidden]="prix_vente.valid" class="alert alert-danger">
+            Le prix de vente est requis
+            </div>
+        </div>
+        <div class="form-group">     
+            <label>Date entrée</label>     
+            <input type="date"  class="form-control" name="dateEntreeStock" required #dateEntreeStock="ngModel"          
+            [(ngModel)]="computerToAdd.dateEntreeStock">
+            <div [hidden]="dateEntreeStock.valid" class="alert alert-danger">
+                La date est requise
+                </div>   
+        </div> 
+    
+
+            
+            <input [disabled]="!newComputerForm.valid" class="btn btn-success" type="submit">
+        </form>
+</div>
+
+

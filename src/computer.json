@@ -1,0 +1,34 @@
+{
+  "computer": [
+    {
+      "id": 1,
+      "modele": "Latitude 3500 - 15.6",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prix_achat": 120,
+      "prix_vente": 300,
+      "dateEntreeStock": "2012-04-23"
+    },
+    {
+      "id": 2,
+      "modele": "asus 26032",
+      "marque": "Asus",
+      "type": "Tablette Hybride",
+      "category": "1er prix",
+      "prix_achat": 1000,
+      "prix_vente": 3000,
+      "dateEntreeStock": "2020-03-25"
+    },
+    {
+      "id": 3,
+      "modele": "asus 26032",
+      "marque": "Apple",
+      "type": "Fixe",
+      "category": "Bureautique",
+      "prix_achat": 1,
+      "prix_vente": 1,
+      "dateEntreeStock": "2020-03-16"
+    }
+  ]
+}
