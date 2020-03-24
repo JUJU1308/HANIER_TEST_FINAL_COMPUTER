@@ -30,7 +30,7 @@
                 <label>Type</label> <br>            
                 <select required class="form-control"
                     [(ngModel)]="computerToUpdate.type" name="type" #type="ngModel">
-                    <option *ngFor="let choice of types" [ngValue]="choice.valeur" >
+                    <option *ngFor="let choice of types" [ngValue]="choice" >
                         {{choice}}
                     </option>
                 </select>

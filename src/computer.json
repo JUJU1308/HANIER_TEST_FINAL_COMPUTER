@@ -12,23 +12,23 @@
     },
     {
       "id": 2,
-      "modele": "asus 26032",
+      "modele": "ASUS BEGINNER",
       "marque": "Asus",
-      "type": "Tablette Hybride",
+      "type": "Portable",
       "category": "1er prix",
-      "prix_achat": 1000,
-      "prix_vente": 3000,
+      "prix_achat": 250,
+      "prix_vente": 1000,
       "dateEntreeStock": "2020-03-25"
     },
     {
       "id": 3,
-      "modele": "asus 26032",
-      "marque": "Apple",
-      "type": "Fixe",
-      "category": "Bureautique",
-      "prix_achat": 1,
-      "prix_vente": 1,
-      "dateEntreeStock": "2020-03-16"
+      "modele": "Dell raptor 2",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Gaming",
+      "prix_achat": 1000,
+      "prix_vente": 3000,
+      "dateEntreeStock": "2020-03-02"
     }
   ]
 }
